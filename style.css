@@ -1,6 +1,9 @@
 /* ================= GLOBAL ================= */
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
+html {
+    translate: no;
+}
 body {
     font-family: 'Inter', sans-serif;
     background: #05070d;
@@ -123,14 +126,73 @@ nav a:hover { color:#ffffff; }
 iframe { width:100%; height:80vh; border:none; margin-bottom:20px; }
 
 /* ================= MOBILE ================= */
-@media(max-width:900px){
-    .hero-content { flex-direction:column; text-align:center; }
-    nav { flex-direction:column; gap:15px; align-items:center; padding:20px; }
-    .timeline { padding-left:20px; border-left:2px solid rgba(255,255,255,0.08); }
-    .timeline-item::before { left:-32px; }
-    .skill-tags { justify-content:center; }
-    .contact-grid { flex-direction:column; gap:25px; }
-}
-@media(max-width:900px){
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 900px) {
+    /* Nav adjustments */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 15px 5%; /* reduce side padding */
+        overflow-x: hidden;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Hero adjustments */
+    .hero {
+        height: auto;
+        padding-top: 80px; /* space for fixed nav */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero img {
+        width: 180px; /* smaller on mobile */
+        margin-top: 20px;
+        border: 3px solid #1f2937;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    /* Hide hero glow on mobile */
+    .hero::after {
+        display: none;
+    }
+
+    /* Timeline adjustments */
+    .timeline {
+        padding-left: 20px;
+        border-left: 2px solid rgba(255,255,255,0.08);
+    }
+    .timeline-item::before { left: -32px; }
+
+    /* Skills tags centering */
+    .skill-tags { justify-content: center; }
+
+    /* Contacts */
+    .contact-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
     .contact-item i { font-size: 22px; margin-right: 10px; }
 }
