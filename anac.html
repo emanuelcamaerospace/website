@@ -6,40 +6,236 @@
 <title>ANAC Internship – Emanuel Camacho</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+/* ================= SWIPER OVERRIDES ================= */
+.swiper {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: auto;
+  max-width: 90%;
+  max-height: 500px;
+  object-fit: contain; /* no cropping */
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.02);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover { opacity: 0.7; }
+
+.swiper-pagination { bottom: 10px !important; }
+
+/* PDF Slide */
+.pdf-slide {
+  width: 100%;
+  height: 80vh; /* make it almost full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* let iframe start at top */
+  align-items: center;
+  background: #0c111b;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.pdf-slide iframe {
+  width: 100%;
+  height: calc(100% - 80px); /* leave space for caption and button */
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:6px;
+}
+
+.lightbox:target { display:flex; }
+
+.lightbox-close {
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+</style>
 </head>
 <body>
 
 <a href="index.html" class="btn" style="margin:30px;">← Back to Portfolio</a>
 
+<!-- INTERNSHIP DESCRIPTION -->
 <section class="section">
-    <h2>ANAC – UAS Certification & Simulation</h2>
-    <div class="card">
-        <p>
-            Internship focused on analyzing the European UAS market and developing simulation tools to predict UAS behavior after critical failures.
-        </p>
-        <ul>
-            <li>Trajectory prediction based on aerodynamics calculations</li>
-            <li>HTML-based simulation interface for regulatory processes</li>
-            <li>Contribution to UAS certification documentation</li>
-        </ul>
-         
-    </div>
+  <h2>ANAC – UAS Certification & Simulation</h2>
+  <div class="card">
+    <p>
+      Internship focused on analyzing the European UAS market and developing simulation tools to predict UAS behavior after critical failures.
+    </p>
+    <ul>
+      <li>Trajectory prediction based on aerodynamics calculations</li>
+      <li>HTML-based simulation interface for regulatory processes</li>
+      <li>Contribution to UAS certification documentation</li>
+    </ul>
+  </div>
 </section>
 
+<!-- SLIDING GALLERY -->
 <section class="section">
-    <h2>Standalone Executable</h2>
-    <div class="card">
-        <p>
-            You may find all of the source code in the github via the direct repository <a href="https://github.com/emanuelcamaerospace/Estagio_ANAC_EMANUEL_CAMACHO" target="_blank">
- link</a>.
-        </p>
-        <p>
-            You may also simply download the executable directly from here. It takes 5 seconds to finish running and will open a browser tab (front-end developed in html).
-        </p>
-        <p>
-            <a href="files/UAScalc2.0.exe" download>UAScalc.exe</a>.
-        </p>
+  <h2>Project Gallery</h2>
+
+  <div class="swiper anacSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <a href="#lightbox1"><img src="images/anac1.jpg" alt="Simulation Interface"></a>
+        <div class="caption">
+          <h3>Simulation Interface</h3>
+          <p>HTML-based aerodynamic trajectory prediction tool.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <a href="#lightbox2"><img src="images/anac2.jpg" alt="Trajectory Results"></a>
+        <div class="caption">
+          <h3>Trajectory Output</h3>
+          <p>Failure scenario visualization and trajectory computation results.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <a href="#lightbox3"><img src="images/anac3.jpg" alt="Trajectory Results"></a>
+        <div class="caption">
+          <h3>Trajectory Output</h3>
+          <p>Failure scenario visualization and trajectory computation results.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <a href="#lightbox4"><img src="images/anac4.jpg" alt="Trajectory Results"></a>
+        <div class="caption">
+          <h3>Trajectory Output</h3>
+          <p>Failure scenario visualization and trajectory computation results.</p>
+        </div>
+      </div>
+
+      <!-- Slide 5: PDF Viewer -->
+      <div class="swiper-slide pdf-slide">
+        <iframe src="files/Relatório_ANAC.pdf" type="application/pdf"></iframe>
+        <div class="caption">
+          <h3>Final Report</h3>
+          <p>Internship technical documentation and certification contribution.</p>
+        </div>
+        <a href="#pdfLightbox" class="btn">Open PDF Fullscreen</a>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
+
+<!-- DOWNLOAD & SOURCE -->
+<section class="section">
+  <h2>Standalone Executable & Source Code</h2>
+  <div class="card">
+    <p>
+      You may find all of the source code in the GitHub repository:
+      <a href="https://github.com/emanuelcamaerospace/Estagio_ANAC_EMANUEL_CAMACHO" target="_blank">View Repository</a>.
+    </p>
+    <p>
+      You may also download the standalone executable. It runs in ~5 seconds and automatically opens the browser interface.
+    </p>
+    <a href="files/UAScalc2.0.exe" download class="btn">
+      <i class="fas fa-download"></i> Download UAScalc.exe
+    </a>
+  </div>
+</section>
+
+<!-- LIGHTBOX MODALS -->
+<div id="lightbox1" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="images/anac1.jpg" alt="Simulation Interface">
+</div>
+<div id="lightbox2" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="images/anac2.jpg" alt="Trajectory Results">
+</div>
+<div id="lightbox3" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="images/anac3.jpg" alt="Trajectory Results">
+</div>
+<div id="lightbox4" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="images/anac4.jpg" alt="Trajectory Results">
+</div>
+<!-- PDF Lightbox -->
+<div id="pdfLightbox" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <iframe src="files/Relatório_ANAC.pdf" type="application/pdf"></iframe>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper(".anacSwiper", {
+  loop: true,
+  spaceBetween: 40,
+  centeredSlides: true,
+  autoplay: false, // manual sliding
+  pagination: { el: ".swiper-pagination", clickable: true },
+  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+});
+</script>
 
 </body>
 </html>
