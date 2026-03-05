@@ -1,4 +1,4 @@
-Copyright (c) 2026 [Your Name]
+Copyright (c) 2026 Emanuel Camacho
 
 All Rights Reserved.
 
@@ -24,4 +24,4 @@ Unauthorized use of any part of this repository is strictly prohibited.
 
 For permission requests, please contact the author.
 
-© 2026 [Your Name]. All rights reserved.
+© 2026 Emanuel Camacho. All rights reserved.
