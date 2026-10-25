@@ -145,12 +145,11 @@
     <p class="mono pipeline-loop" data-reveal><i class="fas fa-rotate-left"></i> Loop closes on every camera frame</p>
 
     <div class="media-grid" style="margin-top: 40px">
-      <figure class="figure span-2" data-reveal>
-        <!-- SLOT: thesis/media/architecture.(png|jpg|webp) — block diagram of the full system, wide -->
-        <a class="figure-media ratio-16x9 ratio-contain slot" data-slot="thesis/media/architecture" data-alt="System architecture block diagram" data-caption="System architecture" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-diagram-project"></i><span>Architecture diagram — coming soon</span><code></code></div>
+      <figure class="figure span-2" data-reveal style="max-width:720px;width:100%;margin-inline:auto">
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:1128/1002" data-slot="thesis/media/architecture" data-alt="System flowchart" data-caption="System flowchart — From YOLO detection and Kalman filtering, through control, servo and physics simulation, to the fire / no-fire decision." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>System flowchart — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>System architecture</b><span>Sensors, estimation, control and actuation in the deployed configuration.</span></figcaption>
+        <figcaption><b>System flowchart</b><span>From YOLO detection and Kalman filtering, through control, servo and physics simulation, to the fire / no-fire decision.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -167,25 +166,10 @@
 
     <div class="media-grid">
       <figure class="figure span-2" data-reveal>
-        <!-- SLOT: thesis/media/simulink-model — screenshot of the top-level Simulink model -->
-        <a class="figure-media ratio-16x9 ratio-contain slot" data-slot="thesis/media/simulink-model" data-alt="Top-level Simulink model" data-caption="End-to-end Simulink framework" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-sitemap"></i><span>Simulink model — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:2410/1398" data-slot="thesis/media/tracking-response" data-alt="Gimbal tracking performance" data-caption="Gimbal tracking performance — Yaw and pitch following a live YOLO-fed target, with total pointing error below." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Live tracking performance — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>End-to-end Simulink framework</b><span>Gimbal dynamics, vision model, noise and target trajectory in a single loop.</span></figcaption>
-      </figure>
-      <figure class="figure" data-reveal>
-        <!-- SLOT: thesis/media/tracking-response — tracking error / pointing angle vs time plot -->
-        <a class="figure-media ratio-4x3 ratio-contain slot" data-slot="thesis/media/tracking-response" data-alt="Tracking response plot" data-caption="Tracking response" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-chart-line"></i><span>Tracking response — coming soon</span><code></code></div>
-        </a>
-        <figcaption><b>Tracking response</b><span>Pointing error over an engagement, nominal vs. evasive target.</span></figcaption>
-      </figure>
-      <figure class="figure" data-reveal style="--d:.06s">
-        <!-- SLOT: thesis/media/ga-convergence — genetic algorithm fitness vs generation -->
-        <a class="figure-media ratio-4x3 ratio-contain slot" data-slot="thesis/media/ga-convergence" data-alt="Genetic algorithm convergence plot" data-caption="Controller tuning" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-dna"></i><span>GA convergence — coming soon</span><code></code></div>
-        </a>
-        <figcaption><b>Controller tuning</b><span>Genetic-algorithm convergence of the ISMC gains.</span></figcaption>
+        <figcaption><b>Gimbal tracking performance</b><span>Yaw and pitch following a live YOLO-fed target, with the total pointing error below.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -197,30 +181,21 @@
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Hardware</span>
       <h2>The prototype</h2>
-      <p>A lightweight platform built to take the controller out of simulation: 3D-printed gimbal structure, Pixhawk flight controller as the embedded computer, servo actuators and a dedicated power regulation stage.</p>
+      <p>A lightweight platform designed in Siemens NX to take the controller out of simulation: 3D-printed gimbal structure, Pixhawk-based embedded control, servo actuators and a dedicated power-regulation stage.</p>
     </div>
 
     <div class="media-grid">
-      <figure class="figure span-2" data-reveal>
-        <!-- SLOT: thesis/media/prototype — best photo of the assembled prototype, landscape -->
-        <a class="figure-media ratio-16x9 slot" data-slot="thesis/media/prototype" data-alt="Assembled C-UAS prototype" data-caption="Assembled prototype" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-camera-retro"></i><span>Prototype photo — coming soon</span><code></code></div>
-        </a>
-        <figcaption><b>Assembled prototype</b><span>2-axis gimbal, camera and laser module on the test stand.</span></figcaption>
-      </figure>
       <figure class="figure" data-reveal>
-        <!-- SLOT: thesis/media/cad-render — CAD render or exploded view of the gimbal -->
-        <a class="figure-media ratio-4x3 slot" data-slot="thesis/media/cad-render" data-alt="CAD render of the gimbal" data-caption="Gimbal CAD" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-cube"></i><span>CAD render — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:4/3" data-slot="thesis/media/prototype" data-alt="Full assembly in Siemens NX" data-caption="Full assembly in Siemens NX — Gimbal, actuators and electronics enclosure of the C-UAS platform." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Full assembly in Siemens NX — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Gimbal CAD</b><span>3D-printed structure designed around the actuators.</span></figcaption>
+        <figcaption><b>Full assembly in Siemens NX</b><span>Gimbal, actuators and electronics enclosure of the C-UAS platform.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <!-- SLOT: thesis/media/electronics — Pixhawk / wiring / power board close-up -->
-        <a class="figure-media ratio-4x3 slot" data-slot="thesis/media/electronics" data-alt="Avionics and power electronics" data-caption="Avionics" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-microchip"></i><span>Avionics photo — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:4/3" data-slot="thesis/media/cad-render" data-alt="2-axis gimbal" data-caption="2-axis gimbal — Yaw and pitch stages designed around the servo actuators." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>2-axis gimbal — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Avionics</b><span>Pixhawk controller, servo drivers and power regulation.</span></figcaption>
+        <figcaption><b>2-axis gimbal</b><span>Yaw and pitch stages designed around the servo actuators.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -256,18 +231,16 @@
 
     <div class="media-grid" style="margin-top: 32px">
       <figure class="figure" data-reveal>
-        <!-- SLOT: thesis/media/field-test-1 — photo from the field campaign -->
-        <a class="figure-media ratio-4x3 slot" data-slot="thesis/media/field-test-1" data-alt="Field test setup" data-caption="Field campaign" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-mountain-sun"></i><span>Field-test photo — coming soon</span><code></code></div>
+        <a class="figure-media slot" style="aspect-ratio:3/2" data-slot="thesis/media/live-tracking" data-alt="Live hardware-in-the-loop test" data-caption="Live hardware-in-the-loop test — Webcam target tracking at ~30 fps, with angles streamed to the MATLAB controller." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Live hardware-in-the-loop test — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Field campaign</b><span>Test setup with the target drone.</span></figcaption>
+        <figcaption><b>Live hardware-in-the-loop test</b><span>Webcam target tracking at ~30 fps, with angles streamed to the MATLAB controller.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <!-- SLOT: thesis/media/envelope — interception envelope plot -->
-        <a class="figure-media ratio-4x3 ratio-contain slot" data-slot="thesis/media/envelope" data-alt="Interception envelope" data-caption="Interception envelope" data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-bullseye"></i><span>Interception envelope — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:3/2" data-slot="thesis/media/envelope" data-alt="Laser exposure at 0.8 W" data-caption="Laser exposure at 0.8 W — Irradiance on the sensor aperture and accumulated fluence, against modelled blinding and damage thresholds." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Laser exposure at 0.8 W — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Interception envelope</b><span>Where a successful engagement is possible, by range and target speed.</span></figcaption>
+        <figcaption><b>Laser exposure at 0.8 W</b><span>Irradiance on the sensor aperture and accumulated fluence, against modelled blinding and damage thresholds.</span></figcaption>
       </figure>
     </div>
 

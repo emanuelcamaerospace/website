@@ -525,3 +525,7 @@ var(--bg-2);
 .core-skills { display: grid; gap: 12px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
 .core-label { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
 .core-skills .tag { font-size: .86rem; padding: 6px 12px; color: var(--text); background: var(--surface); }
+
+/* Plots and CAD renders with white backgrounds */
+.figure-media.light { background: #f5f6f8; }
+.figure-media.light.ratio-contain img { padding: 12px; object-fit: contain; }
