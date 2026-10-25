@@ -70,6 +70,37 @@
   </div>
 </section>
 
+<!-- ================= KEY RESULTS ================= -->
+<section id="key-results" class="wrap" style="padding-bottom: clamp(40px, 6vw, 64px)">
+  <div class="key-results-head" data-reveal>
+    <span class="eyebrow laser">Key results</span>
+    <span class="mono">Live hardware test at about 1 m · 7 W laser model · sensor of 10 mm radius</span>
+  </div>
+    <div class="metrics metrics-4">
+      <div class="card metric" data-reveal>
+        <span class="mono">Time on target · 10 mm-radius sensor</span>
+        <span class="value">16.8<small>%</small></span>
+        <span class="label">3.36 s of the 20 s run with the beam on a sensor of 10 mm radius</span>
+      </div>
+      <div class="card metric" data-reveal style="--d:.05s">
+        <span class="mono">Cumulative fluence</span>
+        <span class="value">6.37<small>J/cm²</small></span>
+        <span class="label">Above the modelled damage threshold of about 2 J/cm²</span>
+      </div>
+      <div class="card metric" data-reveal style="--d:.1s">
+        <span class="mono">Time to sensor damage</span>
+        <span class="value">≈ 8.5<small>s</small></span>
+        <span class="label">From the start of the run, at about 1 m range</span>
+      </div>
+      <div class="card metric" data-reveal style="--d:.15s">
+        <span class="mono">Median tracking error</span>
+        <span class="value">&lt; 1<small>°</small></span>
+        <span class="label">0.93° yaw · 0.64° pitch (IMU-measured vs desired)</span>
+      </div>
+    </div>
+  <p class="mono" style="margin-top: 14px" data-reveal><a href="#results" class="link-arrow" style="font-size:.85rem">How these were measured <i class="fas fa-arrow-down"></i></a></p>
+</section>
+
 <!-- ================= FEATURED VIDEO ================= -->
 <section class="wrap" style="padding-bottom: clamp(56px, 8vw, 96px)">
   <figure class="figure" data-reveal>
@@ -208,31 +239,8 @@
   <div class="wrap">
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Results</span>
-      <h2>Live hardware test with a 7 W laser model</h2>
+      <h2>How the results were obtained</h2>
       <p>On recorded footage of a UAV at about 3 m, median tracking errors were 0.56° in yaw and 0.29° in pitch, limited mainly by the low-cost servos. In a live test, the prototype tracked a hand at about 1 m for 20 s. The tracking data were then used in the laser energy model with a 7 W laser and a sensor of 10 mm radius.</p>
-    </div>
-
-    <div class="metrics metrics-4">
-      <div class="card metric" data-reveal>
-        <span class="mono">Time on target · 10 mm-radius sensor</span>
-        <span class="value">16.8<small>%</small></span>
-        <span class="label">3.36 s of the 20 s run with the beam on a sensor of 10 mm radius</span>
-      </div>
-      <div class="card metric" data-reveal style="--d:.05s">
-        <span class="mono">Cumulative fluence</span>
-        <span class="value">6.37<small>J/cm²</small></span>
-        <span class="label">Above the modelled damage threshold of about 2 J/cm²</span>
-      </div>
-      <div class="card metric" data-reveal style="--d:.1s">
-        <span class="mono">Time to sensor damage</span>
-        <span class="value">≈ 8.5<small>s</small></span>
-        <span class="label">From the start of the run, at about 1 m range</span>
-      </div>
-      <div class="card metric" data-reveal style="--d:.15s">
-        <span class="mono">Median tracking error</span>
-        <span class="value">&lt; 1<small>°</small></span>
-        <span class="label">0.93° yaw · 0.64° pitch (IMU-measured vs desired)</span>
-      </div>
     </div>
 
     <div class="media-grid" style="margin-top: 32px">
