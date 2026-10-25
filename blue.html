@@ -1,170 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLUE – Emanuel Camacho</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-    <style>
-        /* General Gallery Styling */
-        .swiper {
-            width: 100%;
-            padding-top: 20px;
-            padding-bottom: 50px;
-        }
-
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            background: transparent; /* Removes the heavy black box */
-            min-height: 600px;
-        }
-
-        /* Specific fix for the PDF to prevent squashing */
-        .swiper-slide iframe {
-            width: 100%;
-            height: 800px; /* Increased height for better document viewing */
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        /* Responsive media handling */
-        .swiper-slide img, 
-        .swiper-slide model-viewer, 
-        .swiper-slide video {
-            max-width: 100%;
-            height: auto;
-            max-height: 700px;
-            border-radius: 8px;
-        }
-
-        .caption {
-            margin-top: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .caption h3 {
-            margin: 0 0 8px 0;
-            font-weight: 600;
-        }
-
-        .caption p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        /* Adjusting navigation button colors if background is dark */
-        .swiper-button-next, .swiper-button-prev {
-            color: #007bff;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLUE Micro-Turbojet | Emanuel Camacho</title>
+<meta name="description" content="Compressor design for the Aerotéc BLUE micro-turbojet: centrifugal impeller and diffuser, MATLAB–NX CAD automation and STAR-CCM+ CFD.">
+<meta name="google" content="notranslate">
+<meta name="theme-color" content="#070a12">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
-<a href="index.html" class="btn" style="margin:30px; display: inline-block;">← Back to Portfolio</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">EC</span><span>Emanuel Camacho</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#work">My work</a>
+      <a href="#model">3D model</a>
+      <a href="#test">Engine test</a>
+      <a href="#docs">Documents</a>
+      <a href="index.html#contact" class="btn btn-sm"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </div>
+</header>
 
-<section class="section" style="max-width: 1200px; margin: auto; padding: 20px;">
-    <h2>BLUE – Micro Turbojet Project</h2>
-    <div class="card">
-        <p>
-            As part of <strong>Aerotéc</strong>, I am currently leading the design and optimization of radial impeller and diffuser components for a student-developed micro turbojet engine where I have:
-        </p>
-        <ul>
-            <li>Created detailed 3D CAD models of impeller and diffuser components in SolidWorks and Siemens NX, integrating aerodynamic efficiency with manufacturing constraints and structural integrity considerations.</li>
-            <li>Developed an in-house CAD automation process involving Siemens NX and MATLAB, greatly improving design efficiency and consistency.</li>
-            <li>Created tutorials regarding the CAD automation process and its applications, instructing other team members on its use as the new default methodology.</li>
-            <li>Developed MATLAB scripts to calculate blade geometry, flow paths, pressure ratios, and performance parameters for the centrifugal compressor.</li>
-            <li>Conducted CFD simulations in Star-CCM+ to validate impeller performance, analyze flow separation, and optimize blade angles to meet design targets.</li>
-            <li>Ensured system-level integration of the compressor with combustion chamber and turbine sections to balance overall engine performance.</li>
-        </ul>
+<main>
+
+<section class="page-hero heat">
+  <div class="wrap">
+    <a href="index.html#experience" class="back"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+    <div class="page-hero-grid">
+      <div>
+        <span class="eyebrow" data-reveal>Aerotéc · Student engine project</span>
+        <h1 data-reveal style="--d:.05s">BLUE micro-turbojet — compressor design</h1>
+        <p class="lead" data-reveal style="--d:.1s">Designing the centrifugal impeller and diffuser for a student-built turbojet, and the automation that lets the team regenerate the whole compressor geometry in about 30 seconds.</p>
+        <div class="tags" data-reveal style="--d:.15s"><span class="tag">Turbomachinery</span><span class="tag">Siemens NX</span><span class="tag">SolidWorks</span><span class="tag">MATLAB</span><span class="tag">STAR-CCM+</span></div>
+      </div>
+      <dl class="meta-table" data-reveal style="--d:.12s">
+        <div><dt>Role</dt><dd>Design Team Member, Compressor Section</dd></div>
+        <div><dt>Team</dt><dd>15 engineers · Aerotéc, IST</dd></div>
+        <div><dt>Period</dt><dd>Jan 2026 — Present</dd></div>
+        <div><dt>Location</dt><dd>Lisbon, Portugal</dd></div>
+      </dl>
     </div>
-
-    <h3 style="margin-top: 40px;">Project Gallery</h3>
-    
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-            <!-- Slide 1: 3D Model -->
-            <div class="swiper-slide">
-                <model-viewer src="models/impellerV6.gltf"
-                              alt="Impeller 3D Model"
-                              camera-controls auto-rotate
-                              style="width:100%; height:600px;">
-                </model-viewer>
-                <div class="caption">
-                    <h3>Interactive 3D Impeller</h3>
-                    <p>Rotate and zoom the 3D impeller model, designed based on MATLAB performance calculations.</p>
-                </div>
-            </div>
-
-            <!-- Slide 2: PDF (Fixed Width) -->
-            <div class="swiper-slide">
-                <!-- Added #view=FitH to help the PDF scale to the width of the frame -->
-                <iframe src="files/BLUE_CAD.pdf#view=FitH"></iframe>
-                <div class="caption">
-                    <h3>CAD Automation Process</h3>
-                    <p>Document summarizing my own CAD automation process for new and existing team members.</p>
-                </div>
-            </div>
-
-            <!-- Slide 3: NX Revision Image (Fixed Class) -->
-            <div class="swiper-slide">
-                <img src="images/sketchrevpost.JPG" alt="Impeller v6">
-                <div class="caption">
-                    <h3>Impeller Design in NX</h3>
-                    <p>6th revision of the impeller design in Siemens NX.</p>
-                </div>
-            </div>
-
-            <!-- Slide 4: Video -->
-            <div class="swiper-slide">
-                <video controls style="width: 70%; max-height: 600px;">
-                    <source src="files/Video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="caption">
-                    <h3>Video Demonstration</h3>
-                    <p>Shows assembly and performance testing of the micro turbojet engine during the project.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Pagination & Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
+  </div>
 </section>
 
-<!-- Scripts -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<section id="work" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">My contribution</span>
+      <h2>What I built</h2>
+    </div>
+    <div class="highlights">
+      <div class="card highlight" data-reveal>
+        <span class="num">01 · AERO DESIGN</span>
+        <h3>Impeller &amp; diffuser</h3>
+        <p>Aerodynamic design and optimisation of the centrifugal compressor stage, balancing efficiency with manufacturing constraints and structural integrity.</p>
+      </div>
+      <div class="card highlight" data-reveal style="--d:.06s">
+        <span class="num">02 · ANALYSIS</span>
+        <h3>MATLAB mean-line toolchain</h3>
+        <p>Thermodynamic and mean-line scripts that compute 3D blade geometry, flow paths, stage pressure ratio and performance parameters.</p>
+      </div>
+      <div class="card highlight" data-reveal>
+        <span class="num">03 · AUTOMATION</span>
+        <h3>Parametric CAD pipeline</h3>
+        <p>MATLAB drives Siemens NX directly, so a full design iteration is one click and ~30 s. Now the team's default workflow — I wrote the tutorials to onboard everyone.</p>
+      </div>
+      <div class="card highlight" data-reveal style="--d:.06s">
+        <span class="num">04 · VALIDATION</span>
+        <h3>CFD in STAR-CCM+</h3>
+        <p>Simulations to study boundary-layer separation, optimise blade incidence and confirm the predicted pressure ratio; integration with combustor and turbine.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoHeight: false, // Keeps the container height stable
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+<section id="model" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Interactive</span>
+      <h2>The impeller in 3D</h2>
+      <p>Revision 6, generated from the MATLAB performance calculations. Drag to rotate, scroll or pinch to zoom.</p>
+    </div>
+    <div class="viewer" data-reveal>
+      <model-viewer src="models/impellerV6.gltf" poster="images/opt/impeller-render.webp" alt="Interactive 3D model of the BLUE centrifugal impeller"
+        camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="20deg" interaction-prompt="none"
+        shadow-intensity="0.6" exposure="1.05" loading="lazy" reveal="auto"></model-viewer>
+      <span class="viewer-hint mono"><i class="fas fa-hand-pointer"></i> Drag to rotate</span>
+    </div>
 
+    <div class="media-grid" style="margin-top: 24px">
+      <figure class="figure span-2" data-reveal>
+        <a class="figure-media ratio-contain" href="images/opt/sketchrevpost.webp" data-lightbox="blue" data-caption="Impeller revision 6 in Siemens NX" style="aspect-ratio: 1400/866">
+          <picture>
+            <source type="image/webp" srcset="images/opt/sketchrevpost-thumb.webp 720w, images/opt/sketchrevpost.webp 1400w" sizes="(max-width: 1140px) 100vw, 1100px">
+            <img src="images/opt/sketchrevpost.jpg" width="1400" height="866" alt="Impeller revision 6 in Siemens NX" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <figcaption><b>Impeller design in Siemens NX</b><span>Sixth revision of the impeller geometry.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="test" class="section">
+  <div class="wrap split">
+    <figure class="figure" data-reveal>
+      <div class="figure-media">
+        <video controls preload="none" playsinline poster="images/opt/blue-video-poster.jpg" width="478" height="850">
+          <source src="files/blue-turbojet-test.mp4" type="video/mp4">
+        </video>
+      </div>
+    </figure>
+    <div data-reveal style="--d:.08s">
+      <span class="eyebrow">Engine test</span>
+      <h2 style="margin:14px 0 16px">Light-off on the test stand</h2>
+      <p class="lead">Assembly and ignition testing of the micro-turbojet during the project — from the start-up air supply to sustained combustion at the exhaust.</p>
+    </div>
+  </div>
+</section>
+
+<section id="docs" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Documents</span>
+      <h2>CAD automation guide</h2>
+    </div>
+    <div class="docs">
+      <div class="card doc" data-reveal>
+        <div class="doc-icon blue"><i class="fas fa-file-pdf"></i></div>
+        <div><h3>CAD automation process</h3><p>The guide I wrote for new and existing team members on the MATLAB → NX workflow.</p></div>
+        <div class="doc-actions"><a href="files/BLUE_CAD.pdf" class="btn btn-sm" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Open</a></div>
+        <details data-pdf="files/BLUE_CAD.pdf#view=FitH" data-title="CAD automation process"><summary><i class="fas fa-chevron-right"></i> Preview here</summary></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Emanuel Camacho</span>
+    <span><a href="index.html">Home</a> · <a href="thesis.html">Thesis</a> · <a href="anac.html">ANAC</a> · <a href="cv.html">CV</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>

@@ -1,305 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emanuel Camacho | Aerospace Engineering</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
+<title>Emanuel Camacho | Aerospace Engineer</title>
+<meta name="description" content="Emanuel Camacho — MSc Aerospace Engineering (IST). Propulsion, turbomachinery and counter-UAS control systems.">
 <meta name="google" content="notranslate">
+<meta name="theme-color" content="#070a12">
+<meta property="og:title" content="Emanuel Camacho | Aerospace Engineer">
+<meta property="og:description" content="Propulsion, turbomachinery and counter-UAS control systems.">
+<meta property="og:image" content="images/opt/profile-800.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" type="image/webp" href="images/opt/profile-800.webp" imagesrcset="images/opt/profile-400.webp 400w, images/opt/profile-800.webp 800w" imagesizes="(max-width: 880px) 200px, 380px">
+<script>document.documentElement.classList.add("js");</script>
+</head>
 <body>
 
-<nav>
-    
-    <div><strong>EMANUEL CAMACHO</strong></div>
-    <div>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <a href="cv.html" class="btn"><i class="fas fa-file-pdf"></i> CV</a>
-    </div>
-</nav>
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">EC</span><span>Emanuel Camacho</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#thesis">Thesis</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="cv.html" class="btn btn-sm"><i class="fas fa-file-lines"></i> CV</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HERO SECTION -->
+<main id="top">
+
+<!-- ================= HERO ================= -->
 <section class="hero">
-    <div class="hero-content">
-        <img src="images/profile.png" alt="Emanuel Camacho">
-        <div class="hero-text">
-            <h1>Emanuel Camacho</h1>
-            <h2>MSc in Aerospace Engineering | Propulsion & Aircraft Systems</h2>  
-            <p>
-                Motivated 22 year old aerospace engineering student focused on propulsion, turbomachinery, and aerospace systems. 
-                Passionate about aviation, defense applications, and technological innovation.
-            </p>
-            <a href="#experience" class="btn">Explore My Work</a>
-        </div>
-    </div>
-</section>
-
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="timeline">
-
-        <!-- BLUE -->
-        <div class="timeline-item">
-            <div class="timeline-date">JAN 2026 — PRESENT</div>
-            <div class="card experience-card">
-
-                <div class="media-banner" 
-                style="background-image:url('images/BLUE_branco.png'); 
-                        background-size: 70%; 
-                        background-position: center; 
-                        background-repeat: no-repeat;">
-                </div>
-
-                <div class="card-content">
-                    <h3>Aerotéc – BLUE</h3>
-                    <p>
-                        Design of radial impeller and diffuser for micro turbojet engines.
-                        Turbomachinery modelling in MATLAB and CAD-based compressor design.
-                    </p>
-                    <a href="blue.html" class="btn">Project Details</a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ANAC -->
-        <div class="timeline-item">
-            <div class="timeline-date">AUG 2024 — SEP 2024</div>
-            <div class="card experience-card">
-
-                <div class="media-banner" style="background-image:url('images/anaclogo.png');"></div>
-
-                <div class="card-content">
-                    <h3>ANAC – Civil Aviation Authority</h3>
-                    <p>
-                        Development of aerodynamic models predicting UAS trajectories after critical failures.
-                        HTML-based simulation tools for certification support.
-                    </p>
-                    <a href="anac.html" class="btn">Project Details</a>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="section">
-  <h2>Education</h2>
-  <div class="timeline">
-
-    <!-- MSc IST -->
-    <div class="timeline-item">
-      <div class="timeline-date">2024 — 2026 (ONGOING)</div>
-      <div class="card experience-card edu-card">
-          <div class="media-banner" style="background-image:url('images/ist.svg');"></div>
-          <div class="card-content">
-              <h3>MSc in Aerospace Engineering – Instituto Superior Técnico</h3>
-              <p>Specialization: Aircraft Aerodynamics & Propulsion</p>
-              <p>Projected to be completed in November 2026</p>
-          </div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="status" data-reveal><span class="status-dot"></span> Graduating Nov 2026 · Open to engineering roles</span>
+      <h1 data-reveal style="--d:.05s">Emanuel Camacho</h1>
+      <p class="lead" data-reveal style="--d:.1s">
+        Aerospace engineer specialising in <strong>propulsion and turbomachinery</strong>, currently finishing a
+        defence-funded MSc thesis on <strong>laser-based counter-UAS control systems</strong> at Instituto Superior Técnico.
+      </p>
+      <div class="hero-actions" data-reveal style="--d:.15s">
+        <a href="#thesis" class="btn btn-primary">See my work <i class="fas fa-arrow-down"></i></a>
+        <a href="files/EmanuelCamacho.pdf" class="btn" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download CV</a>
+      </div>
+      <div class="facts" data-reveal style="--d:.2s">
+        <div class="fact"><span class="mono">Based in</span><span>Lisbon, Portugal</span></div>
+        <div class="fact"><span class="mono">Degree</span><span>MSc Aerospace Eng. · IST</span></div>
+        <div class="fact"><span class="mono">Languages</span><span>PT · EN C2 · ES C1 · DE A2</span></div>
       </div>
     </div>
 
-    <!-- TUM (kept as is) -->
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="card experience-card edu-card">
-          <div class="media-banner" style="background-image:url('images/TUM.svg');"></div>
-          <div class="card-content">
-              <h3>Technical University of Munich – Erasmus Semester</h3>
-              <p>Propulsion & Aircraft Systems</p>
-              <p>Completed August 2025</p>
-          </div>
+    <div class="portrait" data-reveal style="--d:.1s">
+      <div class="portrait-frame">
+        <picture>
+          <source type="image/webp" srcset="images/opt/profile-400.webp 400w, images/opt/profile-800.webp 800w" sizes="(max-width: 880px) 200px, 380px">
+          <img src="images/opt/profile-800.jpg" srcset="images/opt/profile-400.jpg 400w, images/opt/profile-800.jpg 800w" sizes="(max-width: 880px) 200px, 380px" width="800" height="1000" alt="Portrait of Emanuel Camacho" fetchpriority="high">
+        </picture>
       </div>
+      <div class="portrait-tag"><i class="fas fa-jet-fighter"></i> Aerotéc · BLUE turbojet team</div>
     </div>
-
-    <!-- BSc IST -->
-    <div class="timeline-item">
-      <div class="timeline-date">2021 — 2024</div>
-      <div class="card experience-card edu-card">
-          <div class="media-banner" style="background-image:url('images/ist.svg');"></div>
-          <div class="card-content">
-              <h3>BSc in Aerospace Engineering – Instituto Superior Técnico</h3>
-              <p>Completed July 2024</p>
-          </div>
-      </div>
-    </div>
-
-    <!-- High School -->
-    <div class="timeline-item">
-      <div class="timeline-date">2018 — 2021</div>
-      <div class="card experience-card edu-card">
-          <div class="media-banner" style="background-image:url('images/francisco_franco.png');"></div>
-          <div class="card-content">
-              <h3>High School – Escola Secundária Francisco Franco</h3>
-              <p>Sciences & Technologies, graduated top of class – Grade 19.13/20</p>
-              <p>Completed August 2021</p>
-          </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- MSc THESIS -->
+<!-- ================= THESIS ================= -->
 <section id="thesis" class="section">
-    <h2>MSc Thesis</h2>
-    <div class="card">
-        <p>Ongoing research in the blinding of a drone with a high-powered laser (control theory). Documentation and results will be published progressively.</p>
-        <a href="thesis.html" class="btn"><i class="fas fa-arrow-right"></i> Thesis Details</a>
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow laser">Current research · MSc thesis</span>
+      <h2>Laser-based interception of unmanned aerial systems</h2>
     </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <h2>Skills</h2>
-
-    <div class="skill-category">
-        <h3>Industry Knowledge</h3>
-        <div class="skill-tags">
-            <div class="skill-tag">NX</div>
-            <div class="skill-tag">Star-CCM+</div>
-            <div class="skill-tag">MATLAB</div>
-            <div class="skill-tag">Simulink</div>
-            <div class="skill-tag">SolidWorks</div>
-            <div class="skill-tag">Solid Edge</div>
+    <a href="thesis.html" class="card card-hover feature" data-reveal>
+      <div class="feature-body">
+        <div class="feature-meta">
+          <span><i class="fas fa-building-columns"></i> IST · Portuguese Air Force · ISR</span>
+          <span><i class="fas fa-calendar"></i> Sep 2025 – Nov 2026</span>
         </div>
-    </div>
-
-    <div class="skill-category">
-        <h3>Programming</h3>
-        <div class="skill-tags">
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">C</div>
-            <div class="skill-tag">HTML</div>
-            <div class="skill-tag">Front-End</div>
-            <div class="skill-tag">Back-End</div>
-            <div class="skill-tag">R</div>
-        </div>
-    </div>
-
-    <div class="skill-category">
-        <h3>Engineering Management</h3>
-        <div class="skill-tags">
-            <div class="skill-tag">Project Engineering</div>
-            <div class="skill-tag">Project Planning</div>
-            <div class="skill-tag">Project Management</div>
-            <div class="skill-tag">LaTeX</div>
-            <div class="skill-tag">Excel</div>
-        </div>
-    </div>
-
-    <div class="skill-category">
-        <h3>Languages</h3>
-        <div class="skill-tags">
-            <div class="skill-tag">Portuguese (Native)</div>
-            <div class="skill-tag">English (C2)</div>
-            <div class="skill-tag">Spanish (C1)</div>
-            <div class="skill-tag">German (A2)</div>
-        </div>
-    </div>
-</section>
-
-<!-- RELEVANT MODULES -->
-<section id="modules" class="section">
-    <h2>Relevant Modules</h2>
-    <div class="course-grid">
-        <div class="card"><h3>Aerodynamics I, II and III</h3><p>Compressible and incompressible aerodynamics theory.</p></div>
-        <div class="card"><h3>Propulsion Systems</h3><p>Gas turbines, turbojet thermodynamics, and compressor/turbine design.</p></div>
-        <div class="card"><h3>Computational Fluid Dynamics</h3><p>Numerical simulations, modeling techniques, and engineering optimization of flow.</p></div>
-        <div class="card"><h3>Introduction to Control and Flight Control</h3><p>Control theory applied to aircraft.</p></div>
-        <div class="card"><h3>Electromechanical Systems</h3><p>Fundamentals of electromechanical systems design.</p></div>
-        <div class="card"><h3>Helicopters</h3><p>Blade element theory, vortex theory and all fundamentals of rotary wing flight.</p></div>
-</section>
-
-<!-- EXTRACURRICULAR NESD -->
-<section id="extracurricular" class="section">
-    <h2>Extracurriculars</h2>
-    <div class="card">
-    <h3>NESD : 2023 - 2026 (ongoing)</h3>
-    <p>
-        Generated engagement in political topics using digital tools and social media platforms, maintaining consistent messaging.
-        Conducted an interview with a Portuguese deputy (member of parliament) using strong communication and research skills.
-    </p>
-
-    <a href="https://www.youtube.com/watch?v=aXqZO8vijGA&t=4s" target="_blank" class="btn youtube-btn">
-        <i class="fab fa-youtube"></i> Watch Interview
+        <h3>Blinding a drone's optical sensors with a precision-pointed, low-power laser</h3>
+        <p>Instead of burning through a drone with a kilowatt-class laser, this work moves the complexity into tracking and control: keep a modest laser locked on the camera long enough to neutralise it.</p>
+        <ul class="feature-list">
+          <li>Genetic-algorithm-tuned Integral Sliding Mode Control on a 2-axis gimbal</li>
+          <li>End-to-end Simulink framework: gimbal dynamics, vision, noise, target physics</li>
+          <li>3D-printed prototype with Pixhawk avionics, validated in field tests</li>
+        </ul>
+        <span class="link-arrow">Explore the thesis <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <svg class="lockon" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
+          <g class="grid">
+            <line x1="0" y1="85" x2="400" y2="85"/><line x1="0" y1="170" x2="400" y2="170"/><line x1="0" y1="255" x2="400" y2="255"/>
+            <line x1="100" y1="0" x2="100" y2="340"/><line x1="200" y1="0" x2="200" y2="340"/><line x1="300" y1="0" x2="300" y2="340"/>
+          </g>
+          <!-- gimbal -->
+          <g fill="#131c30" stroke="rgba(232,235,241,.5)" stroke-width="1.2">
+            <rect x="40" y="292" width="84" height="12" rx="3"/>
+            <rect x="74" y="270" width="16" height="22"/>
+            <path d="M58 270 h48 v-26 a24 24 0 0 1 -48 0 z"/>
+            <rect x="70" y="236" width="24" height="16" rx="3" transform="rotate(-35 82 244)"/>
+          </g>
+          <!-- beam -->
+          <line class="beam" x1="92" y1="236" x2="282" y2="106"/>
+          <!-- target -->
+          <circle class="ring" cx="286" cy="104" r="18"/>
+          <circle class="ring r2" cx="286" cy="104" r="18"/>
+          <g fill="none" stroke="rgba(232,235,241,.85)" stroke-width="1.4">
+            <path d="M272 98 l28 12 M300 98 l-28 12"/>
+            <circle cx="270" cy="96" r="6"/><circle cx="302" cy="96" r="6"/>
+            <circle cx="270" cy="112" r="6"/><circle cx="302" cy="112" r="6"/>
+          </g>
+          <path class="reticle" d="M254 78 h-8 v8 M318 78 h8 v8 M254 130 h-8 v-8 M318 130 h8 v-8"/>
+          <text x="246" y="66">TGT-01 · TRACK LOCK</text>
+          <text x="246" y="150">AZ 32.4°  EL 18.7°</text>
+          <text x="40" y="324">2-AXIS GIMBAL · ISMC</text>
+        </svg>
+      </div>
     </a>
-</div>
+  </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Experience</span>
+      <h2>Engineering work</h2>
+    </div>
+
+    <div class="xp-list">
+      <!-- BLUE -->
+      <article class="card xp" data-reveal>
+        <div class="xp-logo">
+          <picture>
+            <source type="image/webp" srcset="images/opt/impeller-render.webp">
+            <img class="impeller" src="images/opt/impeller-render.png" width="432" height="471" alt="Render of the BLUE centrifugal impeller" loading="lazy">
+          </picture>
+        </div>
+        <div>
+          <div class="xp-head">
+            <h3>Aerotéc — BLUE micro-turbojet</h3>
+            <span class="mono">Jan 2026 — Present · Lisbon</span>
+          </div>
+          <p class="xp-role">Design Team Member, Compressor Section</p>
+          <ul>
+            <li>Aerodynamic design of the centrifugal impeller and diffuser for a small-scale turbojet, within a 15-member team.</li>
+            <li>MATLAB thermodynamic and mean-line scripts for 3D blade geometry, flow paths and stage pressure ratio.</li>
+            <li>Built the team's parametric CAD pipeline (MATLAB ↔ Siemens NX): a full redesign now takes one click and ~30 s.</li>
+            <li>STAR-CCM+ CFD to study separation, tune blade incidence and verify the predicted pressure ratio.</li>
+          </ul>
+          <div class="xp-foot">
+            <div class="tags"><span class="tag">Turbomachinery</span><span class="tag">Siemens NX</span><span class="tag">MATLAB</span><span class="tag">STAR-CCM+</span></div>
+            <a href="blue.html" class="link-arrow">Project details <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ANAC -->
+      <article class="card xp" data-reveal>
+        <div class="xp-logo">
+          <picture>
+            <source type="image/webp" srcset="images/opt/anac-logo.webp">
+            <img src="images/opt/anac-logo.png" width="520" height="237" alt="ANAC — Portuguese Civil Aviation Authority" loading="lazy">
+          </picture>
+        </div>
+        <div>
+          <div class="xp-head">
+            <h3>ANAC — Portuguese Civil Aviation Authority</h3>
+            <span class="mono">Aug 2024 — Sep 2024 · Lisbon</span>
+          </div>
+          <p class="xp-role">Project Intern, UAS Certification</p>
+          <ul>
+            <li>Aerodynamic failure models for 8+ commercial UAS, predicting ballistic trajectories and ground-impact zones.</li>
+            <li>Built an HTML-based simulation tool so certification engineers can assess UAS safety without writing code.</li>
+            <li>Market analysis of the European UAS landscape, supporting ANAC's EASA-aligned certification framework.</li>
+          </ul>
+          <div class="xp-foot">
+            <div class="tags"><span class="tag">Flight dynamics</span><span class="tag">Trajectory simulation</span><span class="tag">Web tooling</span><span class="tag">EASA</span></div>
+            <a href="anac.html" class="link-arrow">Project details <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Education</span>
+      <h2>Academic path</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item current" data-reveal>
+        <div class="card tl-card">
+          <div>
+            <span class="mono">2024 — Nov 2026 (expected)</span>
+            <h3>MSc Aerospace Engineering · Instituto Superior Técnico</h3>
+            <p>Specialisation in aircraft aerodynamics and propulsion systems.</p>
+          </div>
+          <div class="tl-logo"><img src="images/ist.svg" width="96" height="42" alt="Instituto Superior Técnico" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="card tl-card">
+          <div>
+            <span class="mono">2025 · Erasmus semester</span>
+            <h3>Technical University of Munich</h3>
+            <p>Advanced propulsion technologies and aircraft systems integration.</p>
+          </div>
+          <div class="tl-logo"><img src="images/TUM.svg" width="96" height="50" alt="Technical University of Munich" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="card tl-card">
+          <div>
+            <span class="mono">2021 — 2024</span>
+            <h3>BSc Aerospace Engineering · Instituto Superior Técnico</h3>
+            <p>Fluid dynamics, flight mechanics, propulsion and flight control.</p>
+          </div>
+          <div class="tl-logo"><img src="images/ist.svg" width="96" height="42" alt="Instituto Superior Técnico" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="card tl-card">
+          <div>
+            <span class="mono">2018 — 2021 · Funchal</span>
+            <h3>Escola Secundária Francisco Franco</h3>
+            <p>Sciences &amp; Technologies — graduated top of class with <strong>19.13 / 20</strong>.</p>
+          </div>
+          <div class="tl-logo"><span class="mono-badge">ESFF</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Toolkit</span>
+      <h2>Skills &amp; certifications</h2>
+    </div>
+
+    <div class="skills">
+      <div class="card" data-reveal>
+        <h3><i class="fas fa-cube"></i> CAD &amp; simulation</h3>
+        <div class="tags"><span class="tag">Siemens NX</span><span class="tag">SolidWorks</span><span class="tag">Solid Edge</span><span class="tag">STAR-CCM+</span><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">Simscape</span></div>
+      </div>
+      <div class="card" data-reveal style="--d:.06s">
+        <h3><i class="fas fa-gears"></i> Engineering</h3>
+        <div class="tags"><span class="tag">Turbomachinery design</span><span class="tag">Aerodynamic analysis</span><span class="tag">CFD</span><span class="tag">Control systems (ISMC)</span><span class="tag">C-UAS architecture</span><span class="tag">Systems engineering</span><span class="tag">Project management</span></div>
+      </div>
+      <div class="card" data-reveal>
+        <h3><i class="fas fa-code"></i> Programming &amp; tools</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">R</span><span class="tag">HTML / CSS / JS</span><span class="tag">LaTeX</span><span class="tag">LTspice</span><span class="tag">Excel</span></div>
+      </div>
+      <div class="card" data-reveal style="--d:.06s">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <div class="langs">
+          <div class="lang"><span>Portuguese</span><span class="bar"><span style="--lvl:100%"></span></span><span class="mono">Native</span></div>
+          <div class="lang"><span>English</span><span class="bar"><span style="--lvl:95%"></span></span><span class="mono">C2</span></div>
+          <div class="lang"><span>Spanish</span><span class="bar"><span style="--lvl:78%"></span></span><span class="mono">C1</span></div>
+          <div class="lang"><span>German</span><span class="bar"><span style="--lvl:35%"></span></span><span class="mono">A2</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subhead" data-reveal><h3>Certifications</h3></div>
+    <div class="grid-3">
+      <div class="card cert" data-reveal>
+        <i class="fas fa-wind"></i>
+        <span class="mono">Sep 2026 · Cadflow / Siemens</span>
+        <h3>STAR-CCM+ CFD Training</h3>
+        <p>Certified training in CFD simulation with Siemens STAR-CCM+.</p>
+      </div>
+      <div class="card cert" data-reveal style="--d:.06s">
+        <i class="fas fa-certificate"></i>
+        <span class="mono">Aug 2026 · VHS Lernportal</span>
+        <h3>German — A2</h3>
+        <p>Completed level A2 German language coursework.</p>
+      </div>
+      <div class="card cert" data-reveal style="--d:.12s">
+        <i class="fas fa-certificate"></i>
+        <span class="mono">Aug 2025 · TU Munich</span>
+        <h3>German — A1.1</h3>
+        <p>Completed level A1.1 coursework during the Erasmus semester.</p>
+      </div>
+    </div>
+
+    <div class="subhead" data-reveal><h3>Relevant coursework</h3></div>
+    <div class="grid-3">
+      <div class="card course" data-reveal><h3>Aerodynamics I, II &amp; III</h3><p>Incompressible and compressible aerodynamic theory.</p></div>
+      <div class="card course" data-reveal style="--d:.05s"><h3>Propulsion Systems</h3><p>Gas turbines, turbojet thermodynamics, compressor and turbine design.</p></div>
+      <div class="card course" data-reveal style="--d:.1s"><h3>Computational Fluid Dynamics</h3><p>Numerical methods, modelling and flow optimisation.</p></div>
+      <div class="card course" data-reveal><h3>Control &amp; Flight Control</h3><p>Control theory applied to aircraft.</p></div>
+      <div class="card course" data-reveal style="--d:.05s"><h3>Electromechanical Systems</h3><p>Fundamentals of electromechanical system design.</p></div>
+      <div class="card course" data-reveal style="--d:.1s"><h3>Helicopters</h3><p>Blade-element and vortex theory, rotary-wing flight.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
 <section id="about" class="section">
-    <h2>About</h2>
-    <div class="card">
-        <p>
-            It has always been my dream to fly, which first led me to consider a career as an airline pilot. 
-            Today, I express this passion via flight simulation and immersion in the aerospace industry.
-        </p>
-        <p>
-            This fascination grew alongside my academic curiosity, motivating me to enter Portugal’s most 
-            competitive engineering program in Aerospace Engineering at Instituto Superior Técnico. 
-            I graduated high school with an average of 19.13/20 and moved from a rural village to Lisbon 
-            to pursue my degree.
-        </p>
-        <p>
-            During my MSc, I undertook an Erasmus semester at the Technical University of Munich focusing 
-            on aircraft propulsion and systems engineering. I also joined “BLUE”, a student project designing 
-            micro turbojets for UAVs.
-        </p>
-        <p>
-            In summer 2024, I interned at ANAC, Portugal’s Civil Aviation Authority, developing software 
-            to predict UAS flight paths after critical failures, contributing to certification processes. 
-            This was my first experience making a meaningful technical impact.
-        </p>
+  <div class="wrap about">
+    <div>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">About</span>
+        <h2>From a rural village to jet engines</h2>
+      </div>
+      <div class="about-text" data-reveal>
+        <p>It has always been my dream to fly. That first pointed me towards becoming an airline pilot; today I channel it into flight simulation and into building the machines themselves.</p>
+        <p>That fascination pushed me into Portugal's most competitive engineering programme, Aerospace Engineering at Instituto Superior Técnico. I graduated from high school with 19.13/20 and moved from a rural village to Lisbon to study.</p>
+        <p>My first real technical impact came at ANAC, building software that predicts where a drone lands after a critical failure. Since then I've studied propulsion at TU Munich, joined the BLUE micro-turbojet team, and taken on a counter-drone thesis with the Portuguese Air Force.</p>
+      </div>
     </div>
+
+    <aside class="card" data-reveal style="--d:.08s">
+      <span class="mono">Involvement · Dec 2023 — Present</span>
+      <h3 style="margin:8px 0 10px">NESD-IST — Board Member</h3>
+      <p>Student organisation for political awareness at IST. I run digital communications across social platforms and conducted and published an interview with a member of the Portuguese Parliament.</p>
+      <a href="https://www.youtube.com/watch?v=aXqZO8vijGA&amp;t=4s" target="_blank" rel="noopener" class="btn btn-sm" style="margin-top:18px"><i class="fab fa-youtube"></i> Watch the interview</a>
+    </aside>
+  </div>
 </section>
 
-
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-    <h2>Contact & Professional Links</h2>
-    <div class="contact-grid">
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:emanuel.aerospace@gmail.com">emanuel.aerospace@gmail.com</a>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/emanuel-camacho-05ab8a245" target="_blank">emanuel-camacho</a>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/emanuelcamaerospace/" target="_blank">emanuelcamaerospace</a>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/+351960366633" target="_blank">+351 960 366 633</a>
-        </div>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Contact</span>
+    <h2 data-reveal>Let's build something that flies.</h2>
+    <p class="lead" data-reveal>I'm looking for roles in propulsion, aerospace systems and defence from late 2026. The fastest way to reach me is email.</p>
+    <div class="contact-actions" data-reveal>
+      <a href="mailto:emanuel.aerospace@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> emanuel.aerospace@gmail.com</a>
+      <a href="files/EmanuelCamacho.pdf" class="btn" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download CV</a>
     </div>
-    <p style="margin-top:60px; opacity:0.5;">© 2026 Emanuel Camacho</p>
+    <div class="contact-links" data-reveal>
+      <a class="contact-link" href="https://www.linkedin.com/in/emanuel-camacho-05ab8a245" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i><span><small>LinkedIn</small><b>emanuel-camacho</b></span></a>
+      <a class="contact-link" href="https://github.com/emanuelcamaerospace/" target="_blank" rel="noopener"><i class="fab fa-github"></i><span><small>GitHub</small><b>emanuelcamaerospace</b></span></a>
+      <a class="contact-link" href="https://wa.me/351960366633" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span><small>WhatsApp</small><b>+351 960 366 633</b></span></a>
+    </div>
+  </div>
 </section>
 
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) { entry.target.classList.add("visible"); }
-    });
-});
-document.querySelectorAll(".section, .card").forEach(el => {
-    el.classList.add("fade-in");
-    observer.observe(el);
-});
-</script>
+</main>
 
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Emanuel Camacho</span>
+    <span><a href="thesis.html">Thesis</a> · <a href="blue.html">BLUE</a> · <a href="anac.html">ANAC</a> · <a href="cv.html">CV</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>

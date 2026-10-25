@@ -1,249 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANAC Internship – Emanuel Camacho</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>ANAC Internship — UAS Failure Trajectories | Emanuel Camacho</title>
+<meta name="description" content="Internship at ANAC, the Portuguese Civil Aviation Authority: post-failure UAS trajectory models and a simulation tool for certification engineers.">
+<meta name="google" content="notranslate">
+<meta name="theme-color" content="#070a12">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<style>
-/* ================= SWIPER OVERRIDES ================= */
-.swiper {
-  width: 100%;
-  padding-bottom: 60px;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-slide img {
-  width: auto;
-  max-width: 90%;
-  max-height: 500px;
-  object-fit: contain; /* no cropping */
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.08);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.swiper-slide img:hover {
-  transform: scale(1.02);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ffffff;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover { opacity: 0.7; }
-
-.swiper-pagination { bottom: 10px !important; }
-
-/* PDF Slide */
-.pdf-slide {
-  width: 100%;
-  height: 80vh; /* make it almost full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* let iframe start at top */
-  align-items: center;
-  background: #0c111b;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 6px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.pdf-slide iframe {
-  width: 100%;
-  height: calc(100% - 80px); /* leave space for caption and button */
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-/* ================= LIGHTBOX ================= */
-.lightbox {
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index: 2000;
-}
-
-.lightbox img {
-  max-width:90%;
-  max-height:90%;
-  border-radius:6px;
-}
-
-.lightbox:target { display:flex; }
-
-.lightbox-close {
-  position:absolute;
-  top:20px;
-  right:30px;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
-<a href="index.html" class="btn" style="margin:30px;">← Back to Portfolio</a>
-
-<!-- INTERNSHIP DESCRIPTION -->
-<section class="section">
-  <h2>ANAC – UAS Certification & Simulation</h2>
-  <div class="card">
-    <p>
-      During my internship at <strong>ANAC – Autoridade Nacional da Aviação Civil</strong>, I contributed to the technical evaluation and certification processes of Unmanned Aircraft Systems (UAS), supporting the development of regulatory frameworks aligned with European standards.
-    </p>
-
-    <ul>
-      <li>Conducted a comprehensive market analysis of the European UAS landscape, identifying certification gaps and emerging regulatory challenges.</li>
-
-      <li>Developed aerodynamic failure prediction models for 8+ commercial UAS platforms, calculating ballistic trajectories and ground impact zones following critical system failures.</li>
-
-      <li>Designed and implemented an interactive HTML-based simulation tool with an intuitive interface, enabling certification engineers to assess safety parameters without requiring programming knowledge.</li>
-
-      <li>Performed trajectory simulations incorporating drag, lift, and mass properties to model realistic post-failure flight behavior.</li>
-
-      <li>Contributed technical analysis and documentation supporting ANAC’s UAS certification framework, ensuring alignment with EASA regulatory standards.</li>
-    </ul>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">EC</span><span>Emanuel Camacho</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fas fa-bars"></i></button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#work">My work</a>
+      <a href="#gallery">The tool</a>
+      <a href="#download">Download</a>
+      <a href="index.html#contact" class="btn btn-sm"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SLIDING GALLERY -->
-<section class="section">
-  <h2>Project Gallery</h2>
+<main>
 
-  <div class="swiper anacSwiper">
-    <div class="swiper-wrapper">
-
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <a href="#lightbox1"><img src="images/anac1.JPG" alt="Simulation Interface"></a>
-        <div class="caption">
-          <h3>Simulation Interface</h3>
-          <p>HTML-based aerodynamic trajectory prediction tool.</p>
-        </div>
+<section class="page-hero">
+  <div class="wrap">
+    <a href="index.html#experience" class="back"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+    <div class="page-hero-grid">
+      <div>
+        <span class="eyebrow" data-reveal>Internship · Civil aviation authority</span>
+        <h1 data-reveal style="--d:.05s">Where does a drone land after it fails?</h1>
+        <p class="lead" data-reveal style="--d:.1s">At ANAC I built aerodynamic models that predict UAS trajectories after a critical failure, and turned them into a tool certification engineers can use without writing a line of code.</p>
+        <div class="tags" data-reveal style="--d:.15s"><span class="tag">Flight dynamics</span><span class="tag">UAS certification</span><span class="tag">EASA</span><span class="tag">HTML / JS</span></div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <a href="#lightbox2"><img src="images/anac2.JPG" alt="Trajectory Results"></a>
-        <div class="caption">
-          <h3>Trajectory Output</h3>
-          <p>Failure scenario visualization and trajectory computation results.</p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <a href="#lightbox3"><img src="images/anac3.JPG" alt="Trajectory Results"></a>
-        <div class="caption">
-          <h3>Trajectory Output</h3>
-          <p>3D flightpath visualization.</p>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <a href="#lightbox4"><img src="images/anac4.JPG" alt="Trajectory Results"></a>
-        <div class="caption">
-          <h3>Aircraft data</h3>
-          <p>Aircraft database used for the simulation, especially drag and lift information.</p>
-        </div>
-      </div>
-
-      <!-- Slide 5: PDF Viewer -->
-      <div class="swiper-slide pdf-slide">
-        <style> .swiper-slide:not(.pdf-slide) { padding-top: 100px; } .pdf-slide { height: 80vh; padding-top: 0; } .pdf-slide iframe { flex-grow: 1; max-height: none; } </style>
-        <iframe src="files/Relatório_ANAC.pdf" type="application/pdf"></iframe>
-        <div class="caption">
-          <h3>Final Report</h3>
-          <p>Internship technical documentation and certification contribution.</p>
-        </div>
-        <a href="#pdfLightbox" class="btn">Open PDF Fullscreen</a>
-      </div>
-
+      <dl class="meta-table" data-reveal style="--d:.12s">
+        <div><dt>Organisation</dt><dd>ANAC — Autoridade Nacional da Aviação Civil</dd></div>
+        <div><dt>Role</dt><dd>Project Intern</dd></div>
+        <div><dt>Period</dt><dd>Aug 2024 — Sep 2024</dd></div>
+        <div><dt>Location</dt><dd>Lisbon, Portugal</dd></div>
+      </dl>
     </div>
-
-    <!-- Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
   </div>
 </section>
 
-<!-- DOWNLOAD & SOURCE -->
-<section class="section">
-  <h2>Standalone Executable & Source Code</h2>
-  <div class="card">
-    <p>
-      You may find all of the source code in the GitHub repository:
-      <a href="https://github.com/emanuelcamaerospace/ANAC_UAS_postfailure_trajectory_simulator" target="_blank">View Repository</a>.
-    </p>
-    <p>
-      You may also download the standalone executable. It runs in ~5 seconds and automatically opens the browser interface.
-    </p>
-    <a href="files/UAScalc2.0.exe" download class="btn">
-      <i class="fas fa-download"></i> Download UAScalc.exe
-    </a>
+<section id="work" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">My contribution</span>
+      <h2>What I did</h2>
+    </div>
+    <div class="highlights">
+      <div class="card highlight" data-reveal>
+        <span class="num">01 · MODELLING</span>
+        <h3>Post-failure trajectory models</h3>
+        <p>Aerodynamic failure models for 8+ commercial UAS, computing ballistic trajectories and ground-impact zones with drag, lift and mass properties.</p>
+      </div>
+      <div class="card highlight" data-reveal style="--d:.06s">
+        <span class="num">02 · TOOLING</span>
+        <h3>Simulation tool for engineers</h3>
+        <p>An interactive HTML-based interface so certification engineers can assess safety parameters with no programming knowledge.</p>
+      </div>
+      <div class="card highlight" data-reveal>
+        <span class="num">03 · MARKET</span>
+        <h3>European UAS landscape</h3>
+        <p>Market analysis of the European UAS sector, identifying trends, certification gaps and emerging regulatory challenges.</p>
+      </div>
+      <div class="card highlight" data-reveal style="--d:.06s">
+        <span class="num">04 · REGULATION</span>
+        <h3>Certification framework</h3>
+        <p>Technical analysis and documentation supporting ANAC's UAS certification framework, aligned with EASA standards.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- LIGHTBOX MODALS -->
-<div id="lightbox1" class="lightbox">
-  <a href="#" class="lightbox-close">&times;</a>
-  <img src="images/anac1.JPG" alt="Simulation Interface">
-</div>
-<div id="lightbox2" class="lightbox">
-  <a href="#" class="lightbox-close">&times;</a>
-  <img src="images/anac2.JPG" alt="Trajectory Results">
-</div>
-<div id="lightbox3" class="lightbox">
-  <a href="#" class="lightbox-close">&times;</a>
-  <img src="images/anac3.JPG" alt="Trajectory Results">
-</div>
-<div id="lightbox4" class="lightbox">
-  <a href="#" class="lightbox-close">&times;</a>
-  <img src="images/anac4.JPG" alt="Trajectory Results">
-</div>
-<!-- PDF Lightbox -->
-<div id="pdfLightbox" class="lightbox">
-  <a href="#" class="lightbox-close">&times;</a>
-  <iframe src="files/Relatório_ANAC.pdf" type="application/pdf"></iframe>
-</div>
+<section id="gallery" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">The tool</span>
+      <h2>UAScalc in use</h2>
+      <p>Click any screenshot to enlarge.</p>
+    </div>
+    <div class="media-grid">
+      <figure class="figure" data-reveal>
+        <a class="figure-media ratio-16x9" href="images/opt/anac1.webp" data-lightbox="anac" data-caption="Simulation interface — aircraft, position, heading and speed inputs">
+          <picture><source type="image/webp" srcset="images/opt/anac1-thumb.webp"><img src="images/opt/anac1.jpg" width="1600" height="693" alt="UAScalc simulation interface" loading="lazy" decoding="async" style="object-position: top left"></picture>
+        </a>
+        <figcaption><b>Simulation interface</b><span>Aircraft, initial position, heading and speed in one form.</span></figcaption>
+      </figure>
+      <figure class="figure" data-reveal style="--d:.06s">
+        <a class="figure-media ratio-16x9" href="images/opt/anac2.webp" data-lightbox="anac" data-caption="Analysis results — final position, fall time, ground distance and impact energy">
+          <picture><source type="image/webp" srcset="images/opt/anac2-thumb.webp"><img src="images/opt/anac2.jpg" width="1600" height="669" alt="Trajectory analysis results on a map" loading="lazy" decoding="async"></picture>
+        </a>
+        <figcaption><b>Trajectory output</b><span>Impact point, fall time, ground distance and kinetic energy.</span></figcaption>
+      </figure>
+      <figure class="figure" data-reveal>
+        <a class="figure-media ratio-16x9" href="images/opt/anac3.webp" data-lightbox="anac" data-caption="3D glide path of the failed aircraft">
+          <picture><source type="image/webp" srcset="images/opt/anac3-thumb.webp"><img src="images/opt/anac3.jpg" width="1233" height="829" alt="3D glide path visualisation" loading="lazy" decoding="async"></picture>
+        </a>
+        <figcaption><b>3D flight path</b><span>Map and 3D glide path of the post-failure descent.</span></figcaption>
+      </figure>
+      <figure class="figure" data-reveal style="--d:.06s">
+        <a class="figure-media ratio-16x9" href="images/opt/anac4.webp" data-lightbox="anac" data-caption="Aircraft database — drag and lift data for fixed-wing and quadcopter UAS">
+          <picture><source type="image/webp" srcset="images/opt/anac4-thumb.webp"><img src="images/opt/anac4.jpg" width="1600" height="804" alt="Aircraft database table" loading="lazy" decoding="async" style="object-position: top left"></picture>
+        </a>
+        <figcaption><b>Aircraft database</b><span>Editable drag, lift and mass data for each platform.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper(".anacSwiper", {
-  loop: true,
-  spaceBetween: 40,
-  centeredSlides: true,
-  autoplay: false, // manual sliding
-  pagination: { el: ".swiper-pagination", clickable: true },
-  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-});
-</script>
+<section id="download" class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Try it</span>
+      <h2>Report, source &amp; executable</h2>
+    </div>
+    <div class="docs">
+      <div class="card doc" data-reveal>
+        <div class="doc-icon blue"><i class="fas fa-file-pdf"></i></div>
+        <div><h3>Final internship report</h3><p>Technical documentation and certification contribution.</p></div>
+        <div class="doc-actions"><a href="files/Relatório_ANAC.pdf" class="btn btn-sm" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Open</a></div>
+        <details data-pdf="files/Relatório_ANAC.pdf" data-title="ANAC internship report"><summary><i class="fas fa-chevron-right"></i> Preview here</summary></details>
+      </div>
+      <div class="card doc" data-reveal>
+        <div class="doc-icon blue"><i class="fab fa-github"></i></div>
+        <div><h3>Source code</h3><p>Full repository for the post-failure trajectory simulator.</p></div>
+        <div class="doc-actions"><a href="https://github.com/emanuelcamaerospace/ANAC_UAS_postfailure_trajectory_simulator" class="btn btn-sm" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> GitHub</a></div>
+      </div>
+      <div class="card doc" data-reveal>
+        <div class="doc-icon blue"><i class="fab fa-windows"></i></div>
+        <div><h3>UAScalc 2.0 — standalone executable</h3><p>Windows · 92 MB · starts in ~5 s and opens the interface in your browser.</p></div>
+        <div class="doc-actions"><a href="files/UAScalc2.0.exe" class="btn btn-sm" download><i class="fas fa-download"></i> Download</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Emanuel Camacho</span>
+    <span><a href="index.html">Home</a> · <a href="thesis.html">Thesis</a> · <a href="blue.html">BLUE</a> · <a href="cv.html">CV</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>
