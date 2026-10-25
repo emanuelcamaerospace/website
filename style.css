@@ -520,3 +520,8 @@ var(--bg-2);
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* Core skills strip (hero) */
+.core-skills { display: grid; gap: 12px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
+.core-label { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+.core-skills .tag { font-size: .86rem; padding: 6px 12px; color: var(--text); background: var(--surface); }
