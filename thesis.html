@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MSc Thesis — Laser-based C-UAS | Emanuel Camacho</title>
+<title>MSc Thesis · Laser-based C-UAS | Emanuel Camacho</title>
 <meta name="description" content="MSc thesis: laser-based interception of unmanned aerial systems. GA-tuned Integral Sliding Mode Control on a 2-axis gimbal, with the Portuguese Air Force and ISR.">
 <meta name="google" content="notranslate">
 <meta name="theme-color" content="#101215">
@@ -48,12 +48,12 @@
 <!-- ================= HERO ================= -->
 <section class="page-hero laser">
   <div class="wrap">
-    <a href="index.html#thesis" class="back"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+    <a href="index.html#research" class="back"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
     <div class="page-hero-grid">
       <div>
         <span class="eyebrow laser" data-reveal>MSc thesis · Defence-funded research</span>
         <h1 data-reveal style="--d:.05s">Laser-based interception of unmanned aerial systems</h1>
-        <p class="lead" data-reveal style="--d:.1s">Neutralising a drone's optical sensors with a low-power, high-precision laser — shifting the hard problem from raw laser power to tracking and control accuracy.</p>
+        <p class="lead" data-reveal style="--d:.1s">A lower-power alternative to laser air defence, neutralising the optical sensors of a UAV with a precisely aimed laser. This shifts the main technical challenge to tracking and pointing precision.</p>
         <div class="hero-actions" data-reveal style="--d:.15s">
           <a href="#documents" class="btn btn-primary"><i class="fas fa-file-lines"></i> Documents</a>
           <a href="#prototype" class="btn">See the prototype <i class="fas fa-arrow-down"></i></a>
@@ -63,7 +63,7 @@
         <div><dt>Institution</dt><dd>Instituto Superior Técnico</dd></div>
         <div><dt>Partners</dt><dd>Portuguese Air Force · ISR Lisboa</dd></div>
         <div><dt>Supervisors</dt><dd>Prof. Daniel Silvestre<br>Prof. Alexandre Bernardino</dd></div>
-        <div><dt>Period</dt><dd>Sep 2025 — Nov 2026</dd></div>
+        <div><dt>Period</dt><dd>Sep 2025 – Nov 2026</dd></div>
         <div><dt>Status</dt><dd><span class="pill active">Writing · defence Nov 2026</span></dd></div>
       </dl>
     </div>
@@ -73,11 +73,11 @@
 <!-- ================= FEATURED VIDEO ================= -->
 <section class="wrap" style="padding-bottom: clamp(56px, 8vw, 96px)">
   <figure class="figure" data-reveal>
-    <!-- SLOT: thesis/media/hero.mp4 (+ optional hero-poster.jpg) — best field-test clip, 16:9, 20–60 s, < 15 MB -->
+    <!-- SLOT: thesis/media/hero.mp4 (+ optional hero-poster.jpg). Best clip, 16:9, 20 to 60 s, under 15 MB -->
     <div class="figure-media ratio-16x9 slot slot-hero" data-slot="thesis/media/hero" data-kind="video">
-      <div class="slot-empty"><i class="fas fa-video"></i><span>Field-test footage — coming soon</span><code></code></div>
+      <div class="slot-empty"><i class="fas fa-video"></i><span>Field-test footage coming soon</span><code></code></div>
     </div>
-    <figcaption><b>Tracking and lock-on in the field</b><span>The prototype acquiring and holding a moving drone.</span></figcaption>
+    <figcaption><b>Tracking in practice</b><span>The prototype acquiring and following a moving target.</span></figcaption>
   </figure>
 </section>
 
@@ -90,37 +90,41 @@
     </div>
     <div class="about">
       <div class="prose" data-reveal>
-        <p>Cheap commercial drones have created real security and privacy risks, especially in urban areas and conflict zones. The usual counter-measures — kinetic interception or RF jamming — are expensive per engagement, legally constrained, or unsafe around people.</p>
-        <p>High-energy laser systems solve some of this, but they need kilowatt-class power to destroy the airframe. This thesis takes a different route: <strong>blind the drone's camera instead of destroying the drone</strong>. A much weaker laser is enough, provided it stays on the sensor long enough.</p>
-        <p>That turns the problem into one of pointing precision. A vision system estimates the target's position and velocity; those estimates drive a two-axis gimbal carrying the laser, and how well it stays aligned determines the achieved <strong>Time on Target (TOT)</strong>. Through dynamic modelling, control design, simulation and field testing, the work evaluates whether the concept holds up in realistic scenarios — including evasive targets.</p>
+        <p>Low-cost commercial UAVs pose significant privacy and security challenges. Kinetic interception and radio-frequency jamming are often unsuitable for urban environments due to collateral risks and cost, while high-power laser systems are expensive and complex.</p>
+        <p>Current laser defence systems destroy the structure of the target with kilowatt-class lasers over several kilometres. This thesis proposes lower-power lasers that target the optical sensors of the drone at shorter ranges. The reduced range is offset by the compact size and low weight of the laser, which allow it to be mounted on flexible platforms such as an interceptor drone.</p>
+        <p>A visual detection system estimates the trajectory of the UAV and drives a gimbal-mounted laser. Interception success is directly tied to the time on target, since sustained irradiation increases the energy delivered to the sensor.</p>
       </div>
       <div class="card" data-reveal style="--d:.08s">
-        <span class="mono">Key figure of merit</span>
-        <h3 style="margin:8px 0 10px">Time on Target</h3>
-        <p>How long the laser spot stays on the target's optical sensor during an engagement. Every modelling and control choice in the thesis is judged by its effect on TOT across nominal and evasive trajectories.</p>
+        <h3 style="margin-bottom:14px">Research objectives</h3>
+        <ul class="feature-list">
+          <li>Simulate the integrated system, from visual detection to laser energy delivery.</li>
+          <li>Design an integral sliding mode controller and tune it by optimisation, in simulation and on hardware.</li>
+          <li>Build a prototype and measure its tracking error against video of a UAV at about 3 m.</li>
+          <li>Estimate the time on target and the laser power needed to blind or damage the sensor.</li>
+        </ul>
       </div>
     </div>
 
     <div class="highlights" style="margin-top: 48px">
       <div class="card highlight" data-reveal>
         <span class="num">01 · CONTROL</span>
-        <h3>GA-optimised Integral Sliding Mode Control</h3>
-        <p>An ISMC scheme on a precision 2-axis gimbal, with gains tuned by a genetic algorithm for robust visual tracking under disturbances.</p>
+        <h3>Integral sliding mode controller</h3>
+        <p>Derived with a Lyapunov stability analysis and a boundary layer, with its parameters tuned by a genetic algorithm.</p>
       </div>
       <div class="card highlight" data-reveal style="--d:.06s">
         <span class="num">02 · SIMULATION</span>
-        <h3>End-to-end Simulink framework</h3>
-        <p>High-fidelity gimbal dynamics, visual detection pipeline, sensor-noise models and target trajectory physics in one loop, before any hardware.</p>
+        <h3>Simulink and Simscape model</h3>
+        <p>The gimbal dynamics, actuators, sensors and visual detection system, simulated together before hardware implementation.</p>
       </div>
       <div class="card highlight" data-reveal>
         <span class="num">03 · HARDWARE</span>
-        <h3>Lightweight C-UAS prototype</h3>
-        <p>Custom 3D-printed mechanics, Pixhawk-based embedded computing, servo actuators and dedicated power regulation.</p>
+        <h3>Low-cost prototype</h3>
+        <p>A two-axis gimbal built from hobby-grade components and 3D-printed parts, with the controller running in Simulink on a host computer.</p>
       </div>
       <div class="card highlight" data-reveal style="--d:.06s">
         <span class="num">04 · VALIDATION</span>
-        <h3>Field experiments</h3>
-        <p>Physical tests of optical tracking and neutralisation, establishing baseline metrics for mobile and interceptor-drone deployments.</p>
+        <h3>Recorded and live tests</h3>
+        <p>Tracking measured on recorded footage of a UAV at about 3 m and in a live hand-tracking test at about 1 m.</p>
       </div>
     </div>
   </div>
@@ -132,15 +136,15 @@
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">System architecture</span>
       <h2>From pixels to photons</h2>
-      <p>A closed loop running continuously: every new camera frame updates the target estimate, the controller corrects the gimbal, and the laser's alignment is what decides the engagement.</p>
+      <p>Most interception systems comprise two components, the detection of the target and the control of the interception mechanism. Here, a visual detection system tracks the UAV and feeds its estimated position to the controller of a two-axis gimbal carrying the laser.</p>
     </div>
 
     <div class="pipeline" data-reveal>
-      <div class="stage"><i class="fas fa-camera"></i><h3>Detect</h3><p>Camera and vision pipeline locate the drone in each frame.</p></div>
-      <div class="stage"><i class="fas fa-location-crosshairs"></i><h3>Estimate</h3><p>Target position and velocity estimated from noisy measurements.</p></div>
-      <div class="stage"><i class="fas fa-sliders"></i><h3>Control</h3><p>GA-tuned ISMC computes yaw and pitch torque commands.</p></div>
-      <div class="stage"><i class="fas fa-arrows-spin"></i><h3>Actuate</h3><p>Pixhawk drives the servo-actuated 2-axis gimbal.</p></div>
-      <div class="stage"><i class="fas fa-bolt"></i><h3>Engage</h3><p>Laser held on the optical sensor — Time on Target.</p></div>
+      <div class="stage"><i class="fas fa-camera"></i><h3>Detect</h3><p>A YOLO-based vision system locates the drone in each frame.</p></div>
+      <div class="stage"><i class="fas fa-location-crosshairs"></i><h3>Estimate</h3><p>A Kalman filter estimates the target position from noisy detections.</p></div>
+      <div class="stage"><i class="fas fa-sliders"></i><h3>Control</h3><p>The integral sliding mode controller computes the yaw and pitch commands.</p></div>
+      <div class="stage"><i class="fas fa-arrows-spin"></i><h3>Actuate</h3><p>Servo actuators drive the two-axis gimbal.</p></div>
+      <div class="stage"><i class="fas fa-bolt"></i><h3>Engage</h3><p>Once aligned, the laser irradiates the camera sensor.</p></div>
     </div>
     <p class="mono pipeline-loop" data-reveal><i class="fas fa-rotate-left"></i> Loop closes on every camera frame</p>
 
@@ -153,21 +157,21 @@
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Modelling &amp; simulation</span>
       <h2>Gimbal dynamics and control</h2>
-      <p>The yaw–pitch gimbal was derived with Newton–Euler, Lagrange–Euler and Kane's method, which give identical equations and isolate the gyroscopic and inertial coupling as disturbance torques. The controller is then designed to reject exactly those disturbances.</p>
+      <p>The gimbal dynamics were derived with the Newton-Euler, Lagrange-Euler and Kane methods, which give the same equations. A dynamic model of the gimbal is combined with an integral sliding mode controller, and the whole system is simulated in Simulink before hardware implementation.</p>
     </div>
 
     <div class="media-grid">
       <figure class="figure" data-reveal>
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/tracking-response" data-alt="Simulated tracking performance" data-caption="Simulated tracking performance — Yaw and pitch following a YOLO-fed target in the end-to-end Simulink framework, with the total pointing error below." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Simulated tracking performance — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/tracking-response" data-alt="Simulated tracking performance" data-caption="Simulated tracking performance. Yaw and pitch following the target from the visual detection system, with the total pointing error below." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Simulated tracking performance coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Simulated tracking performance</b><span>Yaw and pitch following a YOLO-fed target in the end-to-end Simulink framework, with the total pointing error below.</span></figcaption>
+        <figcaption><b>Simulated tracking performance</b><span>Yaw and pitch following the target from the visual detection system, with the total pointing error below.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/ga-performance" data-alt="Genetic-algorithm controller tuning" data-caption="Genetic-algorithm controller tuning — Best ISMC gain set found by the GA: α and β tracking, tracking error, and the performance metrics it optimises." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Genetic-algorithm controller tuning — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/ga-performance" data-alt="Genetic-algorithm controller tuning" data-caption="Genetic-algorithm controller tuning. Best controller parameters found by the genetic algorithm, with the resulting tracking, tracking error and performance metrics." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Genetic-algorithm controller tuning coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Genetic-algorithm controller tuning</b><span>Best ISMC gain set found by the GA: α and β tracking, tracking error, and the performance metrics it optimises.</span></figcaption>
+        <figcaption><b>Genetic-algorithm controller tuning</b><span>Best controller parameters found by the genetic algorithm, with the resulting tracking, tracking error and performance metrics.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -179,21 +183,21 @@
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Hardware</span>
       <h2>The prototype</h2>
-      <p>A lightweight platform designed in Siemens NX to take the controller out of simulation: 3D-printed gimbal structure, Pixhawk-based embedded control, servo actuators and a dedicated power-regulation stage.</p>
+      <p>A two-axis gimbal prototype was built from hobby-grade components and 3D-printed parts. The controller runs in Simulink on a host computer, and its parameters were optimised on the prototype by a genetic algorithm.</p>
     </div>
 
     <div class="media-grid">
       <figure class="figure" data-reveal>
-        <a class="figure-media slot" style="aspect-ratio:1/1" data-slot="thesis/media/prototype" data-alt="The real gimbal" data-caption="The real gimbal — Assembled prototype: 3D-printed yaw–pitch gimbal, servo actuators and the Pixhawk controller." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>The real gimbal — coming soon</span><code></code></div>
+        <a class="figure-media slot" style="aspect-ratio:1657/1744" data-slot="thesis/media/prototype" data-alt="The real gimbal" data-caption="The real gimbal. Assembled prototype with the 3D-printed gimbal, the servos and the Pixhawk 6C mini." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Prototype photo coming soon</span><code></code></div>
         </a>
-        <figcaption><b>The real gimbal</b><span>Assembled prototype: 3D-printed yaw–pitch gimbal, servo actuators and the Pixhawk controller.</span></figcaption>
+        <figcaption><b>The real gimbal</b><span>Assembled prototype with the 3D-printed gimbal, the servos and the Pixhawk 6C mini.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:1/1" data-slot="thesis/media/cad-render" data-alt="CAD assembly" data-caption="CAD assembly — Final assembly in Siemens NX, designed around the servos and the flight controller." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>CAD assembly — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:1657/1744" data-slot="thesis/media/cad-render" data-alt="CAD assembly" data-caption="CAD assembly. Final assembly in Siemens NX." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>CAD assembly coming soon</span><code></code></div>
         </a>
-        <figcaption><b>CAD assembly</b><span>Final assembly in Siemens NX, designed around the servos and the flight controller.</span></figcaption>
+        <figcaption><b>CAD assembly</b><span>Final assembly in Siemens NX.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -205,7 +209,7 @@
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Results</span>
       <h2>Live hardware test with a 7 W laser model</h2>
-      <p>The prototype tracked a moving hand target at roughly 1 m for a 20 s run. The recorded tracking data were then fed into the laser exposure model for a 7 W laser and a camera sensor of 10 mm radius.</p>
+      <p>On recorded footage of a UAV at about 3 m, median tracking errors were 0.56° in yaw and 0.29° in pitch, limited mainly by the low-cost servos. In a live test, the prototype tracked a hand at about 1 m for 20 s. The tracking data were then used in the laser energy model with a 7 W laser and a sensor of 10 mm radius.</p>
     </div>
 
     <div class="metrics metrics-4">
@@ -222,7 +226,7 @@
       <div class="card metric" data-reveal style="--d:.1s">
         <span class="mono">Time to sensor damage</span>
         <span class="value">≈ 8.5<small>s</small></span>
-        <span class="label">From the start of the run, at ≈ 1 m range</span>
+        <span class="label">From the start of the run, at about 1 m range</span>
       </div>
       <div class="card metric" data-reveal style="--d:.15s">
         <span class="mono">Median tracking error</span>
@@ -233,18 +237,20 @@
 
     <div class="media-grid" style="margin-top: 32px">
       <figure class="figure" data-reveal>
-        <a class="figure-media slot" style="aspect-ratio:638/390" data-slot="thesis/media/live-tracking" data-alt="Live target detection" data-caption="Live target detection — Open-palm target detected at ~30 fps; the yaw and pitch angles are streamed to the controller on the Pixhawk." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Live target detection — coming soon</span><code></code></div>
+        <a class="figure-media slot" style="aspect-ratio:638/390" data-slot="thesis/media/live-tracking" data-alt="Live target detection" data-caption="Live target detection. Open-palm target detected at about 30 fps, with the yaw and pitch angles sent to the controller." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Live target detection coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Live target detection</b><span>Open-palm target detected at ~30 fps; the yaw and pitch angles are streamed to the controller on the Pixhawk.</span></figcaption>
+        <figcaption><b>Live target detection</b><span>Open-palm target detected at about 30 fps, with the yaw and pitch angles sent to the controller.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:638/390" data-slot="thesis/media/laser-7w" data-alt="Sensor exposure at 7 W" data-caption="Sensor exposure at 7 W — Irradiance on a 10 mm-radius sensor and the accumulated fluence, against the modelled blinding and damage thresholds." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Sensor exposure at 7 W — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:638/390" data-slot="thesis/media/laser-7w" data-alt="Sensor exposure at 7 W" data-caption="Sensor exposure at 7 W. Irradiance on a sensor of 10 mm radius and the accumulated fluence, against the modelled blinding and damage thresholds." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Sensor exposure coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Sensor exposure at 7 W</b><span>Irradiance on a 10 mm-radius sensor and the accumulated fluence, against the modelled blinding and damage thresholds.</span></figcaption>
+        <figcaption><b>Sensor exposure at 7 W</b><span>Irradiance on a sensor of 10 mm radius and the accumulated fluence, against the modelled blinding and damage thresholds.</span></figcaption>
       </figure>
     </div>
+
+    <p class="lead" style="margin-top: 32px" data-reveal>These results indicate that, at short range, pointing precision rather than laser power is the limiting factor. They motivate upgraded actuators and mobile platforms such as an interceptor drone.</p>
 
     <div class="callout" style="margin-top: 32px" data-reveal>
       <i class="fas fa-shield-halved"></i>
@@ -262,10 +268,10 @@
     </div>
     <!-- Update statuses: class "done", "active" or nothing (upcoming) -->
     <div class="phases" data-reveal>
-      <div class="phase"><span class="mono">Sep 2025 — Jan 2026</span><div><h3>State of the art &amp; gimbal dynamics</h3><p>Literature review, problem setup, three equivalent dynamic formulations.</p></div><span class="pill done">Done</span></div>
-      <div class="phase"><span class="mono">Feb — Jul 2026</span><div><h3>Control system in Simulink</h3><p>Dynamics in MATLAB, ISMC design, genetic-algorithm tuning.</p></div><span class="pill done">Done</span></div>
-      <div class="phase"><span class="mono">Summer 2026</span><div><h3>Simulation campaign &amp; prototype</h3><p>Trajectories and laser parameters, hardware build, field tests.</p></div><span class="pill done">Done</span></div>
-      <div class="phase"><span class="mono">Aug — Oct 2026</span><div><h3>Writing the thesis</h3><p>Implementation chapters, conclusions and final reviews.</p></div><span class="pill active">In progress</span></div>
+      <div class="phase"><span class="mono">Sep 2025 – Jan 2026</span><div><h3>State of the art &amp; gimbal dynamics</h3><p>Literature review, problem setup, three equivalent dynamic formulations.</p></div><span class="pill done">Done</span></div>
+      <div class="phase"><span class="mono">Feb – Jul 2026</span><div><h3>Control system in Simulink</h3><p>Dynamics in MATLAB, ISMC design, genetic-algorithm tuning.</p></div><span class="pill done">Done</span></div>
+      <div class="phase"><span class="mono">Summer 2026</span><div><h3>Simulation campaign &amp; prototype</h3><p>Trajectories and laser parameters, hardware build, recorded and live tests.</p></div><span class="pill done">Done</span></div>
+      <div class="phase"><span class="mono">Aug – Oct 2026</span><div><h3>Writing the thesis</h3><p>Implementation chapters, conclusions and final reviews.</p></div><span class="pill active">In progress</span></div>
       <div class="phase"><span class="mono">Nov 2026</span><div><h3>Defence</h3><p>Public defence at Instituto Superior Técnico.</p></div><span class="pill">Upcoming</span></div>
     </div>
   </div>

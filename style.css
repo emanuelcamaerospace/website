@@ -65,7 +65,7 @@ h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem); font-weight: 650; letter-spacing: 
 h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
 h3 { font-size: 1.2rem; }
 p { color: var(--muted); }
-strong { color: var(--text); font-weight: 600; }
+strong { font-weight: 600; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -318,7 +318,7 @@ a.card.feature { display: grid; }
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
 .about-text { display: grid; gap: 16px; font-size: 1.04rem; }
-.about-text p:first-child { color: var(--text); font-size: 1.15rem; }
+
 @media (max-width: 880px) { .about { grid-template-columns: 1fr; } }
 
 /* ---------- Contact ---------- */
