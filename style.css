@@ -529,3 +529,7 @@ var(--bg-2);
 /* Plots and CAD renders with white backgrounds */
 .figure-media.light { background: #f5f6f8; }
 .figure-media.light.ratio-contain img { padding: 12px; object-fit: contain; }
+
+.metrics-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .metrics-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .metrics-4 { grid-template-columns: 1fr; } }

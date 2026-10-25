@@ -144,14 +144,6 @@
     </div>
     <p class="mono pipeline-loop" data-reveal><i class="fas fa-rotate-left"></i> Loop closes on every camera frame</p>
 
-    <div class="media-grid" style="margin-top: 40px">
-      <figure class="figure span-2" data-reveal style="max-width:720px;width:100%;margin-inline:auto">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:1128/1002" data-slot="thesis/media/architecture" data-alt="System flowchart" data-caption="System flowchart — From YOLO detection and Kalman filtering, through control, servo and physics simulation, to the fire / no-fire decision." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>System flowchart — coming soon</span><code></code></div>
-        </a>
-        <figcaption><b>System flowchart</b><span>From YOLO detection and Kalman filtering, through control, servo and physics simulation, to the fire / no-fire decision.</span></figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
@@ -165,11 +157,17 @@
     </div>
 
     <div class="media-grid">
-      <figure class="figure span-2" data-reveal>
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:2410/1398" data-slot="thesis/media/tracking-response" data-alt="Gimbal tracking performance" data-caption="Gimbal tracking performance — Yaw and pitch following a live YOLO-fed target, with total pointing error below." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Live tracking performance — coming soon</span><code></code></div>
+      <figure class="figure" data-reveal>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/tracking-response" data-alt="Simulated tracking performance" data-caption="Simulated tracking performance — Yaw and pitch following a YOLO-fed target in the end-to-end Simulink framework, with the total pointing error below." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Simulated tracking performance — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Gimbal tracking performance</b><span>Yaw and pitch following a live YOLO-fed target, with the total pointing error below.</span></figcaption>
+        <figcaption><b>Simulated tracking performance</b><span>Yaw and pitch following a YOLO-fed target in the end-to-end Simulink framework, with the total pointing error below.</span></figcaption>
+      </figure>
+      <figure class="figure" data-reveal style="--d:.06s">
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:16/10" data-slot="thesis/media/ga-performance" data-alt="Genetic-algorithm controller tuning" data-caption="Genetic-algorithm controller tuning — Best ISMC gain set found by the GA: α and β tracking, tracking error, and the performance metrics it optimises." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Genetic-algorithm controller tuning — coming soon</span><code></code></div>
+        </a>
+        <figcaption><b>Genetic-algorithm controller tuning</b><span>Best ISMC gain set found by the GA: α and β tracking, tracking error, and the performance metrics it optimises.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -186,16 +184,16 @@
 
     <div class="media-grid">
       <figure class="figure" data-reveal>
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:4/3" data-slot="thesis/media/prototype" data-alt="Full assembly in Siemens NX" data-caption="Full assembly in Siemens NX — Gimbal, actuators and electronics enclosure of the C-UAS platform." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Full assembly in Siemens NX — coming soon</span><code></code></div>
+        <a class="figure-media slot" style="aspect-ratio:1/1" data-slot="thesis/media/prototype" data-alt="The real gimbal" data-caption="The real gimbal — Assembled prototype: 3D-printed yaw–pitch gimbal, servo actuators and the Pixhawk controller." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>The real gimbal — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Full assembly in Siemens NX</b><span>Gimbal, actuators and electronics enclosure of the C-UAS platform.</span></figcaption>
+        <figcaption><b>The real gimbal</b><span>Assembled prototype: 3D-printed yaw–pitch gimbal, servo actuators and the Pixhawk controller.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:4/3" data-slot="thesis/media/cad-render" data-alt="2-axis gimbal" data-caption="2-axis gimbal — Yaw and pitch stages designed around the servo actuators." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>2-axis gimbal — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:1/1" data-slot="thesis/media/cad-render" data-alt="CAD assembly" data-caption="CAD assembly — Final assembly in Siemens NX, designed around the servos and the flight controller." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>CAD assembly — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>2-axis gimbal</b><span>Yaw and pitch stages designed around the servo actuators.</span></figcaption>
+        <figcaption><b>CAD assembly</b><span>Final assembly in Siemens NX, designed around the servos and the flight controller.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -206,41 +204,45 @@
   <div class="wrap">
     <div class="section-head" data-reveal>
       <span class="eyebrow laser">Results</span>
-      <h2>Field tests &amp; findings</h2>
-      <p>Headline numbers will be published after the thesis defence in November 2026.</p>
+      <h2>Live hardware test with a 7 W laser model</h2>
+      <p>The prototype tracked a moving hand target at roughly 1 m for a 20 s run. The recorded tracking data were then fed into the laser exposure model for a 7 W laser and a camera sensor of 10 mm radius.</p>
     </div>
 
-    <!-- RESULTS: replace "—" with the value, and remove class "pending" from the .metric -->
-    <div class="metrics">
-      <div class="card metric pending" data-reveal>
-        <span class="mono">Simulation · evasive target</span>
-        <span class="value">—<small>%</small></span>
-        <span class="label">Time on Target over an engagement</span>
+    <div class="metrics metrics-4">
+      <div class="card metric" data-reveal>
+        <span class="mono">Time on target · 10 mm-radius sensor</span>
+        <span class="value">16.8<small>%</small></span>
+        <span class="label">3.36 s of the 20 s run with the beam on a sensor of 10 mm radius</span>
       </div>
-      <div class="card metric pending" data-reveal style="--d:.06s">
-        <span class="mono">Field test</span>
-        <span class="value">—<small>mrad</small></span>
-        <span class="label">RMS pointing error while tracking</span>
+      <div class="card metric" data-reveal style="--d:.05s">
+        <span class="mono">Cumulative fluence</span>
+        <span class="value">6.37<small>J/cm²</small></span>
+        <span class="label">Above the modelled damage threshold of about 2 J/cm²</span>
       </div>
-      <div class="card metric pending" data-reveal style="--d:.12s">
-        <span class="mono">Field test</span>
-        <span class="value">—<small>m</small></span>
-        <span class="label">Range at which lock was held</span>
+      <div class="card metric" data-reveal style="--d:.1s">
+        <span class="mono">Time to sensor damage</span>
+        <span class="value">≈ 8.5<small>s</small></span>
+        <span class="label">From the start of the run, at ≈ 1 m range</span>
+      </div>
+      <div class="card metric" data-reveal style="--d:.15s">
+        <span class="mono">Median tracking error</span>
+        <span class="value">&lt; 1<small>°</small></span>
+        <span class="label">0.93° yaw · 0.64° pitch (IMU-measured vs desired)</span>
       </div>
     </div>
 
     <div class="media-grid" style="margin-top: 32px">
       <figure class="figure" data-reveal>
-        <a class="figure-media slot" style="aspect-ratio:3/2" data-slot="thesis/media/live-tracking" data-alt="Live hardware-in-the-loop test" data-caption="Live hardware-in-the-loop test — Webcam target tracking at ~30 fps, with angles streamed to the MATLAB controller." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Live hardware-in-the-loop test — coming soon</span><code></code></div>
+        <a class="figure-media slot" style="aspect-ratio:638/390" data-slot="thesis/media/live-tracking" data-alt="Live target detection" data-caption="Live target detection — Open-palm target detected at ~30 fps; the yaw and pitch angles are streamed to the controller on the Pixhawk." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Live target detection — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Live hardware-in-the-loop test</b><span>Webcam target tracking at ~30 fps, with angles streamed to the MATLAB controller.</span></figcaption>
+        <figcaption><b>Live target detection</b><span>Open-palm target detected at ~30 fps; the yaw and pitch angles are streamed to the controller on the Pixhawk.</span></figcaption>
       </figure>
       <figure class="figure" data-reveal style="--d:.06s">
-        <a class="figure-media slot light ratio-contain" style="aspect-ratio:3/2" data-slot="thesis/media/envelope" data-alt="Laser exposure at 0.8 W" data-caption="Laser exposure at 0.8 W — Irradiance on the sensor aperture and accumulated fluence, against modelled blinding and damage thresholds." data-lightbox="thesis">
-          <div class="slot-empty"><i class="fas fa-image"></i><span>Laser exposure at 0.8 W — coming soon</span><code></code></div>
+        <a class="figure-media slot light ratio-contain" style="aspect-ratio:638/390" data-slot="thesis/media/laser-7w" data-alt="Sensor exposure at 7 W" data-caption="Sensor exposure at 7 W — Irradiance on a 10 mm-radius sensor and the accumulated fluence, against the modelled blinding and damage thresholds." data-lightbox="thesis">
+          <div class="slot-empty"><i class="fas fa-image"></i><span>Sensor exposure at 7 W — coming soon</span><code></code></div>
         </a>
-        <figcaption><b>Laser exposure at 0.8 W</b><span>Irradiance on the sensor aperture and accumulated fluence, against modelled blinding and damage thresholds.</span></figcaption>
+        <figcaption><b>Sensor exposure at 7 W</b><span>Irradiance on a 10 mm-radius sensor and the accumulated fluence, against the modelled blinding and damage thresholds.</span></figcaption>
       </figure>
     </div>
 
