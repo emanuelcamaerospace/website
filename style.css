@@ -307,6 +307,9 @@ a.card.feature { display: grid; }
 .cert i { color: var(--accent); font-size: 1.1rem; margin-bottom: 6px; }
 .cert h3 { font-size: 1.02rem; }
 .cert p { font-size: .9rem; }
+a.card.cert { display: grid; }
+.cert-link { font-size: .85rem; margin-top: 4px; }
+.cert-link i { font-size: .75em; }
 
 .course { display: grid; gap: 6px; padding: 20px 22px; }
 .course h3 { font-size: 1rem; }
